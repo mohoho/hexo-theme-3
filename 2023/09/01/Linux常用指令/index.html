@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Linux常用指令 | mohoho</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Linux常用指令 | mohoho">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="about me刚步入社会的码农一枚">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About me">
+<meta property="og:url" content="http://example.com/about.html">
+<meta property="og:site_name" content="mohoho">
+<meta property="og:description" content="about me刚步入社会的码农一枚">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-08-18T20:58:23.000Z">
+<meta property="article:modified_time" content="2023-09-01T07:33:07.626Z">
+<meta property="article:author" content="qmruan">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpeg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpeg"/>
+</a>
+<div class="author">
+    <span>qmruan</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+            <a title="github"
+               href="https://github.com/mohoho"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:380692614@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=380692614&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=96474839"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(8)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            <small>(2)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;linux">
+            
+            linux
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;玩轮子">
+            
+            玩轮子
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="生活">
+            
+            生活
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="推荐">
+            <i class="fold iconfont icon-right"></i>
+            推荐
+            <small>(5)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;人">
+            
+            人
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;动画">
+            
+            动画
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;有声书">
+            
+            有声书
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;游戏">
+            
+            游戏
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="8">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All 编程 linux "
+           href="/2023/09/01/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Linux常用指令">Linux常用指令</span>
+            <span class="post-date" title="2023-09-01 16:32:07">2023/09/01</span>
+        </a>
+        
+        
+        <a  class="All 推荐 人 "
+           href="/2023/08/21/%E4%BF%9D%E6%8A%A4%E6%BF%92%E5%8D%B1up%E4%B8%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="保护濒危up主">保护濒危up主</span>
+            <span class="post-date" title="2023-08-21 23:45:36">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 游戏 "
+           href="/2023/08/21/%E8%89%BE%E8%BF%AA%E8%8A%AC%E5%A5%87%E7%9A%84%E8%AE%B0%E5%BF%86/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="艾迪芬奇的记忆">艾迪芬奇的记忆</span>
+            <span class="post-date" title="2023-08-21 23:37:38">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 动画 "
+           href="/2023/08/21/%E9%9B%BE%E5%B1%B1%E4%BA%94%E8%A1%8C/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="雾山五行">雾山五行</span>
+            <span class="post-date" title="2023-08-21 23:31:20">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 有声书 "
+           href="/2023/08/21/%E4%BB%8E%E5%A7%91%E8%8E%B7%E9%B8%9F%E5%BC%80%E5%A7%8B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="从姑获鸟开始">从姑获鸟开始</span>
+            <span class="post-date" title="2023-08-21 23:17:38">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 游戏 "
+           href="/2023/08/21/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="黑神话悟空">黑神话悟空</span>
+            <span class="post-date" title="2023-08-21 23:04:45">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 生活 "
+           href="/2023/08/20/%E7%88%B1%E4%BA%BA%E5%A6%82%E5%85%BB%E8%8A%B1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="爱人如养花">爱人如养花</span>
+            <span class="post-date" title="2023-08-20 15:43:09">2023/08/20</span>
+        </a>
+        
+        
+        <a  class="All 编程 玩轮子 "
+           href="/2023/08/19/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%9C%AC%E7%AB%99/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="如何搭建本站">如何搭建本站</span>
+            <span class="post-date" title="2023-08-19 05:22:16">2023/08/19</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Linux常用指令" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Linux常用指令</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="编程">编程</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;linux">linux</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2023-09-01 17:17:30'>2023-09-01 16:32</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-ls-%E6%8C%87%E4%BB%A4"><span class="toc-text">01. ls 指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-pwd%E5%91%BD%E4%BB%A4"><span class="toc-text">02.pwd命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-cd-%E6%8C%87%E4%BB%A4"><span class="toc-text">03.cd 指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-touch%E6%8C%87%E4%BB%A4"><span class="toc-text">04.touch指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-mkdir%E6%8C%87%E4%BB%A4%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-text">05.mkdir指令（重要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-rmdir%E6%8C%87%E4%BB%A4-rm-%E6%8C%87%E4%BB%A4%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%EF%BC%9A"><span class="toc-text">06.rmdir指令 &amp;&amp; rm 指令（重要）：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-man%E6%8C%87%E4%BB%A4%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%EF%BC%9A"><span class="toc-text">07.man指令（重要）：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-cp%E6%8C%87%E4%BB%A4%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%EF%BC%9A"><span class="toc-text">08.cp指令（重要）：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#09-mv%E6%8C%87%E4%BB%A4%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%EF%BC%9A"><span class="toc-text">09.mv指令（重要）：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-cat%E6%8C%87%E4%BB%A4"><span class="toc-text">10.cat指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-more%E6%8C%87%E4%BB%A4"><span class="toc-text">11.more指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-less%E6%8C%87%E4%BB%A4%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-text">12.less指令（重要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-head%E6%8C%87%E4%BB%A4"><span class="toc-text">13.head指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-tail%E6%8C%87%E4%BB%A4"><span class="toc-text">14.tail指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-date%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-text">15.date时间相关的指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Cal%E6%8C%87%E4%BB%A4"><span class="toc-text">16.Cal指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-find%E6%8C%87%E4%BB%A4%EF%BC%9A%EF%BC%88%E7%81%B0%E5%B8%B8%E9%87%8D%E8%A6%81%EF%BC%89-name"><span class="toc-text">17.find指令：（灰常重要） -name</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-grep%E6%8C%87%E4%BB%A4"><span class="toc-text">18.grep指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-zip-unzip%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="toc-text">19.zip&#x2F;unzip指令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-tar%E6%8C%87%E4%BB%A4%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%EF%BC%9A%E6%89%93%E5%8C%85-%E8%A7%A3%E5%8C%85%EF%BC%8C%E4%B8%8D%E6%89%93%E5%BC%80%E5%AE%83%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%9C%8B%E5%86%85%E5%AE%B9"><span class="toc-text">20.tar指令（重要）：打包&#x2F;解包，不打开它，直接看内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-bc%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="toc-text">21.bc指令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E9%87%8D%E8%A6%81%E7%9A%84%E5%87%A0%E4%B8%AA%E7%83%AD%E9%94%AE-Tab-ctrl-c-ctrl-d-ctrl-r"><span class="toc-text">22.重要的几个热键[Tab],[ctrl]-c, [ctrl]-d,[ctrl]-r</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%85%B3%E6%9C%BA"><span class="toc-text">23.关机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E6%8C%87%E4%BB%A4"><span class="toc-text">扩展指令:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="toc-text">shell命令以及运行原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%9F%A5%E8%AF%86"><span class="toc-text">小知识</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Ber_Bai/article/details/115144205">https://blog.csdn.net/Ber_Bai/article/details/115144205</a></p>
+<h2 id="01-ls-指令"><a href="#01-ls-指令" class="headerlink" title="01. ls 指令"></a>01. ls 指令</h2><p><strong>语法</strong>： ls [选项][目录或文件]<br><strong>功能</strong>：对于目录，该命令列出该目录下的所有子目录与文件。对于文件，将列出文件名以及其他信息。<br><strong>常用选项</strong>：</p>
+<ul>
+<li><p>-a 列出目录下的所有文件，包括以 . 开头的隐含文件。</p>
+</li>
+<li><p>-d 将目录象文件一样显示，而不是显示其下的文件。 如：ls –d 指定目录</p>
+</li>
+<li><p>-i 输出文件的 i 节点的索引信息。 如 ls –ai 指定文件</p>
+</li>
+<li><p>-k 以 k 字节的形式表示文件的大小。ls –alk 指定文件</p>
+</li>
+<li><p>-l 列出文件的详细信息。</p>
+</li>
+<li><p>-n 用数字的 UID,GID 代替名称。 （介绍 UID， GID）</p>
+</li>
+</ul>
+<blockquote>
+<p>UID 和 GID 是 UNIX 和类 UNIX 系统（如 Linux 和 macOS）中用于标识用户和组身份的唯一数字。UID（User IDentifier）是用户的唯一标识，而 GID（Group IDentifier）是组的唯一标识。这些数字在整个系统中是唯一的，以确保系统能够正确地识别和管理用户和组。</p>
+</blockquote>
+<p>在 UNIX 系统中，用户的 UID 和 GID 是在创建用户和组时自动分配的。UID 和 GID 的范围通常从 0 开始，但现代系统通常从 1000 开始分配，以保留较低的数字用于系统用户和组。例如，在许多系统上，UID 0 通常分配给根用户（root），而 GID 0 通常分配给根组（root）。</p>
+<p>使用数字的 UID 和 GID 代替名称可以带来一些好处，例如：</p>
+<ol>
+<li>避免名称冲突：使用数字 UID 和 GID 可以避免在不同系统上出现相同的用户名称或组名称导致的冲突。</li>
+<li>简化管理：使用数字 UID 和 GID 可以简化系统管理，因为它们在整个系统中是唯一的。</li>
+<li>提高安全性：数字 UID 和 GID 可以提供更好的安全性，因为攻击者更难以猜测正确的数字。</li>
+</ol>
+<p>总之，UID 和 GID 是 UNIX 和类 UNIX 系统中用于标识用户和组身份的数字，它们提供了一种简单、可靠且安全的方法来管理用户和组。使用数字的 UID 和 GID 代替名称可以带来一些好处，例如避免名称冲突、简化管理和提高安全性。</p>
+<ul>
+<li><p>-F 在每个文件名后附上一个字符以说明该文件的类型，“*”表示可执行的普通文件；“&#x2F;”表示目录；“@”表示符号链接；“|”表示FIFOs；“&#x3D;”表示套接字(sockets)。（目录类型识别）</p>
+</li>
+<li><p>-r 对目录反向排序。</p>
+</li>
+<li><p>-t 以时间排序。</p>
+</li>
+<li><p>-s 在l文件名后输出该文件的大小。（大小排序，如何找到目录下最大的文件）</p>
+</li>
+<li><p>-R 列出所有子目录下的文件。(递归)</p>
+</li>
+<li><p>-1 一行只输出一个文件。</p>
+</li>
+</ul>
+<p>他们还可以组合起来，全看你的需要</p>
+<h2 id="02-pwd命令"><a href="#02-pwd命令" class="headerlink" title="02.pwd命令"></a>02.pwd命令</h2><p><strong>语法</strong>: pwd<br><strong>功能</strong>：显示用户当前所在的目录<br><strong>常用选项</strong>：无</p>
+<h2 id="03-cd-指令"><a href="#03-cd-指令" class="headerlink" title="03.cd 指令"></a>03.cd 指令</h2><p>Linux系统中，磁盘上的文件和目录被组成一棵目录树，每个节点都是目录或文件。</p>
+<p><strong>语法</strong>:cd 目录名<br><strong>功能</strong>：改变工作目录。将当前工作目录改变到指定的目录下。</p>
+<p><strong>举例</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd .. : 返回上级目录</span><br><span class="line">cd /home/litao/linux/ : 绝对路径</span><br><span class="line">cd ../day02/ : 相对路径</span><br><span class="line">cd ~ : 进入用户家目</span><br><span class="line">cd - : 返回最近访问目录</span><br><span class="line"><span class="number">12345</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="04-touch指令"><a href="#04-touch指令" class="headerlink" title="04.touch指令"></a>04.touch指令</h2><p><strong>语法</strong>:touch [选项]… 文件…</p>
+<p><strong>功能</strong>：touch命令参数可更改文档或目录的日期时间，包括存取时间和更改时间，或者新建一个不存在的文件。</p>
+<p><strong>常用选项</strong>：</p>
+<ul>
+<li>-a 或–time&#x3D;atime或–time&#x3D;access或–time&#x3D;use只更改存取时间。</li>
+<li>-c 或–no-create 不建立任何文档。</li>
+<li>-d 使用指定的日期时间，而非现在的时间。</li>
+<li>-f 此参数将忽略不予处理，仅负责解决BSD版本touch指令的兼容性问题。</li>
+<li>-m 或–time&#x3D;mtime或–time&#x3D;modify 只更改变动时间。</li>
+<li>-r 把指定文档或目录的日期时间，统统设成和参考文档或目录的日期时间相同。</li>
+<li>-t 使用指定的日期时间，而非现在的时间。</li>
+</ul>
+<p>这里仅展示常用的：</p>
+<h2 id="05-mkdir指令（重要）"><a href="#05-mkdir指令（重要）" class="headerlink" title="05.mkdir指令（重要）"></a>05.mkdir指令（重要）</h2><p><strong>语法</strong>：mkdir [选项] dirname…</p>
+<p><strong>功能</strong>：在当前目录下创建一个名为 “dirname”的目录</p>
+<p><strong>常用选项</strong>：</p>
+<ul>
+<li>-p, –parents 可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录;</li>
+</ul>
+<p>举例：</p>
+<p>mkdir –p newdir&#x2F;test1 : 递归建立多个目录</p>
+<h2 id="06-rmdir指令-rm-指令（重要）："><a href="#06-rmdir指令-rm-指令（重要）：" class="headerlink" title="06.rmdir指令 &amp;&amp; rm 指令（重要）："></a>06.rmdir指令 &amp;&amp; rm 指令（重要）：</h2><p><strong>rmdir是一个与mkdir相对应的命令。mkdir是建立目录，而rmdir是删除命令。</strong><br><strong>语法</strong>：rmdir [-p][dirName]<br><strong>适用对象</strong>：具有当前目录操作权限的所有使用者<br><strong>功能</strong>：删除空目录<br><strong>常用选项</strong>：</p>
+<ul>
+<li>-p 当子目录被删除后如果父目录也变成空目录的话，就连带父目录一起删除。</li>
+</ul>
+<p><strong>rm命令可以同时删除文件或目录</strong></p>
+<p><strong>语法</strong>：rm [-f-i-r-v][dirName&#x2F;dir]<br><strong>适用对象</strong>：所有使用者<br><strong>功能</strong>：删除文件或目录</p>
+<p><strong>常用选项</strong>：</p>
+<ul>
+<li>-f 即使文件属性为只读(即写保护)，亦直接删除</li>
+<li>-i 删除前逐一询问确认</li>
+<li>-r 删除目录及其下所有文件</li>
+</ul>
+<h2 id="07-man指令（重要）："><a href="#07-man指令（重要）：" class="headerlink" title="07.man指令（重要）："></a>07.man指令（重要）：</h2><p>Linux的命令有很多参数，我们不可能全记住，我们可以通过查看联机手册获取帮助。访问Linux手册页的命令是</p>
+<p><strong>man 语法</strong>: man [选项] 命令</p>
+<p><strong>常用选项：</strong></p>
+<ul>
+<li><p>-k 根据关键字搜索联机帮助</p>
+</li>
+<li><p>num 只在第num章节找</p>
+</li>
+<li><p>-a 将所有章节的都显示出来，比如 man printf 它缺省从第一章开始搜索，找到就停止，用a选项，当按下q退出，他会继续往后面搜索，直到所有章节都搜索完毕。</p>
+</li>
+<li><p>解释一下,面手册分为8章</p>
+<p>1 是普通的命令</p>
+<p>2 是系统调用,如open,write之类的(通过这个，至少可以很方便的查到调用这个函数，需要加什么头文件)<br>3 是库函数,如printf,fread4是特殊文件,也就是&#x2F;dev下的各种设备文件<br>5 是指文件的格式,比如passwd, 就会说明这个文件中各个字段的含义<br>6 是给游戏留的,由各个游戏自己定义<br>7 是附件还有一些变量,比如向environ这种全局变量在这里就有说明<br>8 是系统管理用的命令,这些命令只能由root使用,如ifconfig</p>
+</li>
+</ul>
+<h2 id="08-cp指令（重要）："><a href="#08-cp指令（重要）：" class="headerlink" title="08.cp指令（重要）："></a>08.cp指令（重要）：</h2><p><strong>语法</strong>：cp [选项] 源文件或目录 目标文件或目录<br><strong>功能</strong>: 复制文件或目录<br><strong>说明</strong>: cp指令用于复制文件或目录，如同时指定两个以上的文件或目录，且最后的目的地是一个已经存在的目录，则它会把前面指定的所有文件或目录复制到此目录中。若同时指定多个文件或目录，而最后的目的地并非一个已存在的目录，则会出现错误信息</p>
+<p><strong>常用选项</strong>：</p>
+<ul>
+<li><p>-f 或 –force 强行复制文件或目录， 不论目的文件或目录是否已经存在</p>
+</li>
+<li><p>-i 或 –interactive 覆盖文件之前先询问用户</p>
+</li>
+<li><p>-r递归处理，将指定目录下的文件与子目录一并处理。若源文件或目录的形态，不属于目录或符号链接，则一律视为普通文件处理</p>
+</li>
+<li><p>-R 或 –recursive递归处理，将指定目录下的文件及子目录一并处理</p>
+</li>
+</ul>
+<h2 id="09-mv指令（重要）："><a href="#09-mv指令（重要）：" class="headerlink" title="09.mv指令（重要）："></a>09.mv指令（重要）：</h2><p>mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。<br><strong>语法</strong>: mv [选项] 源文件或目录 目标文件或目录<br><strong>功能</strong>:</p>
+<ol>
+<li>视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。</li>
+<li>当第二个参数类型是文件时，mv命令完成文件重命名，此时，源文件只能有一个（也可以是源目录名），它将所给的源文件或目录重命名为给定的目标文件名。</li>
+<li>当第二个参数是已存在的目录名称时，源文件或目录参数可以有多个，mv命令将各参数指定的源文件均移至目标目录中。</li>
+</ol>
+<p>常用选项：</p>
+<ul>
+<li><p>-f ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖</p>
+</li>
+<li><p>-i ：若目标文件 (destination) 已经存在时，就会询问是否覆盖！</p>
+</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">将rm改造成mv</span><br><span class="line">vim ~/.bashrc #修改这个文件</span><br><span class="line">mkdir -p ~/.trash</span><br><span class="line">alias rm=trash</span><br><span class="line">alias ur=undelfile</span><br><span class="line"><span class="built_in">undelfile</span>() &#123;</span><br><span class="line">mv -i ~/.trash/\$@ ./</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">trash</span>() &#123;</span><br><span class="line">mv $@ ~/.trash/</span><br><span class="line">&#125;</span><br><span class="line"><span class="number">1234567891011</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="10-cat指令"><a href="#10-cat指令" class="headerlink" title="10.cat指令"></a>10.cat指令</h2><p><strong>语法</strong>：cat [选项][文件]<br><strong>功能</strong>： 查看目标文件的内容</p>
+<p><strong>常用选项</strong>：</p>
+<ul>
+<li><p>-b 对非空输出行编号</p>
+</li>
+<li><p>-n 对输出的所有行编号</p>
+</li>
+<li><p>-s 不输出多行空行</p>
+</li>
+</ul>
+<p>题外话：在这里还要介绍一个指令：echo</p>
+<p>功能：echo是一个命令行实用程序，用于在终端上显示文本或变量。</p>
+<p>什么意思？</p>
+<p>在Linux里面一切皆文件，以之前的cat指令为例，它的功能是查看目标文件内容</p>
+<p>怎么查看的？</p>
+<p>其实它是把文件内容输出到显示器文件了，所以我们才能看到内容</p>
+<p>那么echo怎么用</p>
+<p>echo [内容]</p>
+<p>功能：将内容写入显示器文件中</p>
+<p>echo&#x2F;cat [内容] [&lt;或&gt;] [内容]</p>
+<blockquote>
+<p>和&lt;是重定向符号</p>
+</blockquote>
+<p>功能：覆盖、重定向，本来应该显示到显示器的内容，打印到文件中</p>
+<p>echo&#x2F;cat [内容] [&lt;&lt;或&gt;&gt;] [内容]</p>
+<p>“&gt;&gt;和&lt;&lt;”是重定向符号</p>
+<p>功能：追加 、重定向，本来应该显示到显示器的内容，打印到文件中</p>
+<p>指令是什么？</p>
+<blockquote>
+<p>指令和可执行程序都是可以被执行的，指令就是可执行程序，它一定是在系统的某一个位置存在的，拿ls举例</p>
+</blockquote>
+<p>在我的这台虚拟机中，ls指令它就是&#x2F;bin&#x2F;ls可执行文件</p>
+<p>其他的指令也一样</p>
+<h2 id="11-more指令"><a href="#11-more指令" class="headerlink" title="11.more指令"></a>11.more指令</h2><p><strong>语法</strong>：more [选项][文件]<br><strong>功能</strong>：more命令，功能类似 cat<br><strong>常用选项</strong>：</p>
+<ul>
+<li>-n 对输出的所有行编号</li>
+</ul>
+<p>一次展示前n行</p>
+<ul>
+<li>q 退出more</li>
+</ul>
+<h2 id="12-less指令（重要）"><a href="#12-less指令（重要）" class="headerlink" title="12.less指令（重要）"></a>12.less指令（重要）</h2><ul>
+<li>less 工具也是对文件或其它输出进行分页显示的工具，应该说是linux正统查看文件内容的工具，功能极其强大。</li>
+<li>less 的用法比起 more 更加的有弹性。在 more 的时候，我们并没有办法向前面翻， 只能往后面看</li>
+<li>但若使用了 less 时，就可以使用 [pageup][pagedown] 等按键的功能来往前往后翻看文件，更容易用来查看一个文件的内容！</li>
+<li>除此之外，在 less 里头可以拥有更多的搜索功能，不止可以向下搜，也可以向上搜。</li>
+</ul>
+<p><strong>语法</strong>： less [参数] 文件<br><strong>功能</strong>：<br>less与more类似，但使用less可以随意浏览文件，而more仅能向前移动，却不能向后移动，而且less在查看之前不会加载整个文件。</p>
+<p><strong>选项</strong>：</p>
+<p>less [参数]文件 回车后，也可进行下面指令</p>
+<ul>
+<li>-i 忽略搜索时的大小写</li>
+<li>-N 显示每行的行号</li>
+<li>&#x2F;字符串：向下搜索“字符串”的功能</li>
+<li>?字符串：向上搜索“字符串”的功能</li>
+<li>n：重复前一个搜索（与 &#x2F; 或 ? 有关）</li>
+<li>N：反向重复前一个搜索（与 &#x2F; 或 ? 有关）</li>
+<li>q:quit</li>
+</ul>
+<h2 id="13-head指令"><a href="#13-head指令" class="headerlink" title="13.head指令"></a>13.head指令</h2><p>head 与 tail 就像它的名字一样的浅显易懂，它是用来显示开头或结尾某个数量的文字区块，head 用来显示档案的开头至标准输出中，而 tail 想当然尔就是看档案的结尾。</p>
+<p><strong>语法</strong>： head [参数]… [文件]…<br><strong>功能</strong>：<br>head 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。<br><strong>选项</strong>：</p>
+<ul>
+<li>-n&lt;行数&gt; 显示的行数</li>
+</ul>
+<h2 id="14-tail指令"><a href="#14-tail指令" class="headerlink" title="14.tail指令"></a>14.tail指令</h2><p>tail 命令从指定点开始将文件写到标准输出.使用tail命令的-f选项可以方便的查阅正在改变的日志文件,tail -f filename会把filename里最尾部的内容显示在屏幕上,并且不但刷新,使你看到最新的文件内容.</p>
+<p><strong>语法</strong>： tail[必要参数][选择参数][文件]<br><strong>功能</strong>： 用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。<br><strong>选项</strong>：</p>
+<ul>
+<li><p>-f 循环读取</p>
+</li>
+<li><p>-n&lt;行数&gt; 显示行数</p>
+</li>
+</ul>
+<p>怎么取中间一段呢？</p>
+<p>可以这样</p>
+<p>这里有一个新的东西：| ，它是一种符号，后面会被“系统”解释为管道文件</p>
+<p>它的作用相当于流水线一样，前面的命令执行完，后面接着执行</p>
+<h2 id="15-date时间相关的指令"><a href="#15-date时间相关的指令" class="headerlink" title="15.date时间相关的指令"></a>15.date时间相关的指令</h2><p><strong>date显示</strong></p>
+<p>date 指定格式显示时间： date +%Y:%m:%d<br>date 用法：date [OPTION]… [+FORMAT]</p>
+<p><strong>1.在显示方面，使用者可以设定欲显示的格式，格式设定为一个加号后接数个标记，其中常用的标记列表如下</strong></p>
+<ul>
+<li>%H : 小时(00…23)</li>
+<li>%M : 分钟(00…59)</li>
+<li>%S : 秒(00…61)</li>
+<li>%X : 相当于 %H:%M:%S</li>
+<li>%d : 日 (01…31)</li>
+<li>%m : 月份 (01…12)</li>
+<li>%Y : 完整年份 (0000…9999)</li>
+<li>%F : 相当于 %Y-%m-%d</li>
+</ul>
+<p><strong>2.在设定时间方面</strong></p>
+<ul>
+<li>date -s &#x2F;&#x2F;设置当前时间，只有root权限才能设置，其他只能查看。</li>
+<li>date -s 20080523 &#x2F;&#x2F;设置成20080523，这样会把具体时间设置成空00:00:00</li>
+<li>date -s 01:01:01 &#x2F;&#x2F;设置具体时间，不会对日期做更改</li>
+<li>date -s “01:01:01 2008-05-23″ &#x2F;&#x2F;这样可以设置全部时间</li>
+<li>date -s “01:01:01 20080523″ &#x2F;&#x2F;这样可以设置全部时间</li>
+<li>date -s “2008-05-23 01:01:01″ &#x2F;&#x2F;这样可以设置全部时间</li>
+<li>date -s “20080523 01:01:01″ &#x2F;&#x2F;这样可以设置全部时间</li>
+</ul>
+<p><strong>3.时间戳</strong></p>
+<p>时间-&gt;时间戳：date +%s</p>
+<p>时间戳-&gt;时间：date -d@1508749502</p>
+<p>Unix时间戳（英文为Unix epoch, Unix time, POSIX time 或 Unix timestamp）是从1970年1月1日（UTC&#x2F;GMT的午夜）开始所经过的秒数，不考虑闰秒。</p>
+<h2 id="16-Cal指令"><a href="#16-Cal指令" class="headerlink" title="16.Cal指令"></a>16.Cal指令</h2><p>cal命令可以用来显示公历（阳历）日历。公历是现在国际通用的历法，又称格列历，通称阳历。“阳历”又名“太阳历”，系以地球绕行太阳一周为一年，为西方各国所通用，故又名“西历”。</p>
+<p>命令格式： cal [参数][月份][年份]</p>
+<p>功能： 用于查看日历等时间信息，如只有一个参数，则表示年份(1-9999)，如有两个参数，则表示月份和年份</p>
+<p>常用选项：</p>
+<ul>
+<li><p>-3 显示系统前一个月，当前月，下一个月的月历</p>
+</li>
+<li><p>-j 显示在当年中的第几天（一年日期按天算，从1月1号算起，默认显示当前月在一年中的天数）</p>
+</li>
+<li><p>-y 显示当前年份的日历</p>
+</li>
+</ul>
+<h2 id="17-find指令：（灰常重要）-name"><a href="#17-find指令：（灰常重要）-name" class="headerlink" title="17.find指令：（灰常重要） -name"></a>17.find指令：（灰常重要） -name</h2><ul>
+<li>Linux下find命令在目录结构中搜索文件，并执行指定的操作。</li>
+<li>Linux下find命令提供了相当多的查找条件，功能很强大。由于find具有强大的功能，所以它的选项也很多，其中大部分选项都值得我们花时间来了解一下。</li>
+<li>即使系统中含有网络文件系统( NFS)，find命令在该文件系统中同样有效，只你具有相应的权限。</li>
+<li>在运行一个非常消耗资源的find命令时，很多人都倾向于把它放在后台执行，因为遍历一个大的文件系统可能会花费很长的时间(这里是指30G字节以上的文件系统)。</li>
+</ul>
+<p><strong>语法</strong>： find pathname -options<br><strong>功能</strong>： 用于在文件树种查找文件，并作出相应的处理（可能访问磁盘）<br><strong>常用选项</strong>：</p>
+<ul>
+<li>-name 按照文件名查找文件。</li>
+</ul>
+<blockquote>
+<p>find 可以在指定的路径下进行文件的搜索，它是真的在磁盘文件中查找</p>
+</blockquote>
+<p>这里顺便介绍一下which</p>
+<p><code>which</code> 是一个在 Linux 和 Unix 系统中常用的命令行工具，用于查找并显示给定命令的可执行文件的完整路径。当你在命令行中输入一个命令时，系统需要知道这个命令对应的可执行文件的位置。<code>which</code> 命令可以帮助你找到这个位置。</p>
+<p><code>which</code> 的基本用法很简单，只需在命令行中输入 <code>which</code> 命令后跟你要查找的命令名，例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">which ls</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>这将显示 <code>ls</code> 命令的可执行文件的完整路径，例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/bin/ls</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p><code>which</code> 命令会按照系统环境变量 <code>$PATH</code> 中定义的路径顺序查找可执行文件。<code>$PATH</code> 是一个包含多个目录路径的变量，系统会在这些目录中搜索可执行文件。<code>which</code> 命令会输出找到的第一个匹配的可执行文件。</p>
+<p>需要注意的是，<code>which</code> 命令只能查找系统内置的命令和已安装软件的可执行文件，无法查找用户自定义的脚本或别名。</p>
+<p>总之，<code>which</code> 命令在 Linux 和 Unix 系统中非常有用，可以帮助你快速找到命令的可执行文件位置。</p>
+<p>还介绍一下whereis指令</p>
+<p><code>whereis</code> 是 Linux 系统中的一个命令行工具，用于查找二进制文件（可执行文件）、源代码文件和帮助手册文件的位置。它可以帮助用户快速地找到文件在系统中的位置，从而方便地访问和使用这些文件。</p>
+<p><code>whereis</code> 指令的基本语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">whereis [options] name...</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>name</code> 是要查找的文件名。<code>whereis</code> 指令会搜索二进制文件、源代码文件和帮助手册文件的位置。</p>
+<p><code>whereis</code> 支持以下选项：</p>
+<ul>
+<li><code>-b</code> 或 <code>--binary</code>：只搜索二进制文件。</li>
+<li><code>-m</code> 或 <code>--manual</code>：只搜索帮助手册文件。</li>
+<li><code>-s</code> 或 <code>--source</code>：只搜索源代码文件。</li>
+<li><code>-u</code> 或 <code>--version</code>：只搜索包含版本信息的文件。</li>
+<li><code>-B</code> 或 <code>--basename</code>：只输出文件名，不包含路径。</li>
+<li><code>-M</code>：查找手册文件时，仅输出手册文件的名称，不包含路径。</li>
+<li><code>-S</code>：查找源代码文件时，仅输出源代码文件的名称，不包含路径。</li>
+</ul>
+<p>例如，要查找名为 <code>ls</code> 的二进制文件、源代码文件和帮助手册文件的位置，可以使用以下命令：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">whereis ls</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls: /bin/ls /usr/share/man/man1/ls<span class="number">.1</span>.gz /usr/share/man/man1p/ls<span class="number">.1</span>p.gz</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>这表示 <code>ls</code> 的二进制文件位于 <code>/bin/ls</code>，帮助手册文件位于 <code>/usr/share/man/man1/ls.1.gz</code>。</p>
+<p>请注意，<code>whereis</code> 指令可能无法找到所有文件，因为它依赖于系统维护的特定数据库。在某些情况下，您可能需要使用其他搜索工具，如 <code>locate</code> 或 <code>find</code>，来查找文件。</p>
+<h2 id="18-grep指令"><a href="#18-grep指令" class="headerlink" title="18.grep指令"></a>18.grep指令</h2><p>grep参考文档<br>语法： grep [选项] 搜寻字符串 文件<br>功能： 在文件中搜索字符串，将找到的行打印出来（行文本过滤工具</p>
+<p>常用选项：</p>
+<ul>
+<li><p>-i ：忽略大小写的不同，所以大小写视为相同</p>
+</li>
+<li><p>-n ：顺便输出行号</p>
+</li>
+<li><p>-v ：反向选择，亦即显示出没有 ‘搜寻字符串’ 内容的那一行</p>
+</li>
+</ul>
+<h2 id="19-zip-unzip指令："><a href="#19-zip-unzip指令：" class="headerlink" title="19.zip&#x2F;unzip指令："></a>19.zip&#x2F;unzip指令：</h2><p><strong>语法</strong>：</p>
+<p>zip 压缩文件.zip 目录或文件</p>
+<p>unzip 压缩文件.zip [option] 目录</p>
+<p><strong>功能</strong>：</p>
+<p>将目录或文件压缩成zip格式</p>
+<p>将压缩文件解压</p>
+<p><strong>常用选项</strong>：</p>
+<ul>
+<li>-r 递 归处理，将指定目录下的所有文件和子目录一并处理</li>
+</ul>
+<h2 id="20-tar指令（重要）：打包-解包，不打开它，直接看内容"><a href="#20-tar指令（重要）：打包-解包，不打开它，直接看内容" class="headerlink" title="20.tar指令（重要）：打包&#x2F;解包，不打开它，直接看内容"></a>20.tar指令（重要）：打包&#x2F;解包，不打开它，直接看内容</h2><p>tar [-cxtzjvf] 文件与目录 …<br>参数：</p>
+<p><code>tar</code>是一个用于创建、查看和提取归档文件的实用程序。归档文件是一种将多个文件和目录打包在一起的文件，通常用于备份、传输或归档数据。<code>tar</code>的全称是“tape archive”，因为它最初是为了在磁带上存储文件而设计的。</p>
+<p><code>tar</code>命令的语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar [options] [archive_file] [file_or_directory]</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>options</code>是<code>tar</code>命令的可选参数，用于控制归档文件的创建、查看或提取方式。<code>archive_file</code>是要创建的归档文件名（如果没有指定，则将归档文件输出到标准输出），<code>file_or_directory</code>是要添加到归档文件中的文件或目录。</p>
+<p>以下是一些常用的<code>tar</code>命令选项：</p>
+<ol>
+<li><code>-c</code>：创建新的归档文件。</li>
+<li><code>-x</code>：从归档文件中提取文件。</li>
+<li><code>-t</code>：查看归档文件的内容，但不提取文件。</li>
+<li><code>-v</code>：详细输出，显示正在处理的文件名。</li>
+<li><code>-f</code>：指定归档文件名。</li>
+<li><code>-z</code>：使用gzip压缩归档文件（创建<code>.tar.gz</code>文件）。</li>
+<li><code>-j</code>：使用bzip2压缩归档文件（创建<code>.tar.bz2</code>文件）。</li>
+<li><code>-C</code>：指定提取文件时保存到的目录。</li>
+<li><code>--remove-files</code>：提取归档文件后，删除原始文件。</li>
+</ol>
+<p>以下是一些使用<code>tar</code>命令的示例：</p>
+<p>创建一个归档文件：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf archive.tar file1 file2 directory1</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>从归档文件中提取文件：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf archive.tar</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>提取归档文件到指定的目录：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf archive.tar -C /path/to/directory</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>使用gzip压缩归档文件：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -czvf archive.tar.gz file1 file2 directory1</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>使用bzip2压缩归档文件：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">tar -cjvf archive.tar.bz2 file1 file2 directory1</span><br><span class="line"></span><br><span class="line"><span class="number">12</span></span><br><span class="line">范例一：将整个 /etc 目录下的文件全部打包成为 `/tmp/etc.tar`</span><br><span class="line">[root@linux ~]<span class="meta"># tar -cvf /tmp/etc.tar /etc&lt;==仅打包，不压缩！</span></span><br><span class="line">[root@linux ~]<span class="meta"># tar -zcvf /tmp/etc.tar.gz /etc &lt;==打包后，以 gzip 压缩</span></span><br><span class="line">[root@linux ~]<span class="meta"># tar -jcvf /tmp/etc.tar.bz2 /etc &lt;==打包后，以 bzip2 压缩</span></span><br><span class="line">特别注意，在参数 f 之后的文件档名是自己取的，我们习惯上都用 .tar 来作为辨识。</span><br><span class="line">如果加 z 参数，则以 .tar.gz 或 .tgz 来代表 gzip 压缩过的 tar file ～</span><br><span class="line">如果加 j 参数，则以 .tar.bz2 来作为附档名啊～</span><br><span class="line">上述指令在执行的时候，会显示一个警告讯息：</span><br><span class="line">『`tar: Removing leading `/<span class="string">&quot; from member names`』那是关於绝对路径的特殊设定。</span></span><br><span class="line"><span class="string">范例二：查阅上述 /tmp/etc.tar.gz 文件内有哪些文件？</span></span><br><span class="line"><span class="string">[root@linux ~]# tar -ztvf /tmp/etc.tar.gz</span></span><br><span class="line"><span class="string">由於我们使用 gzip 压缩，所以要查阅该 tar file 内的文件时，就得要加上 z 这个参数了！这很重要的！</span></span><br><span class="line"><span class="string">范例三：将 /tmp/etc.tar.gz 文件解压缩在 /usr/local/src 底下</span></span><br><span class="line"><span class="string">[root@linux ~]# cd /usr/local/src</span></span><br><span class="line"><span class="string">[root@linux src]# tar -zxvf /tmp/etc.tar.gz</span></span><br><span class="line"><span class="string">在预设的情况下，我们可以将压缩档在任何地方解开的！以这个范例来说，</span></span><br><span class="line"><span class="string">我先将工作目录变换到 /usr/local/src 底下，并且解开 /tmp/etc.tar.gz ，</span></span><br><span class="line"><span class="string">则解开的目录会在 /usr/local/src/etc 呢！另外，如果您进入 /usr/local/src/etc</span></span><br><span class="line"><span class="string">则会发现，该目录下的文件属性与 /etc/ 可能会有所不同喔！</span></span><br><span class="line"><span class="string">范例四：在 /tmp 底下，我只想要将 /tmp/etc.tar.gz 内的 etc/passwd 解开而已[root@linux ~]# cd /tmp</span></span><br><span class="line"><span class="string">[root@linux tmp]# tar -zxvf /tmp/etc.tar.gz etc/passwd</span></span><br><span class="line"><span class="string">我可以透过 tar -ztvf 来查阅 tarfile 内的文件名称，如果单只要一个文件，</span></span><br><span class="line"><span class="string">就可以透过这个方式来下达！注意到！ etc.tar.gz 内的根目录 / 是被拿掉了！</span></span><br><span class="line"><span class="string">范例五：将 /etc/ 内的所有文件备份下来，并且保存其权限！</span></span><br><span class="line"><span class="string">[root@linux ~]# tar -zxvpf /tmp/etc.tar.gz /etc</span></span><br><span class="line"><span class="string">这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时！</span></span><br><span class="line"><span class="string">范例六：在 /home 当中，比 2005/06/01 新的文件才备份</span></span><br><span class="line"><span class="string">[root@linux ~]# tar -N &quot;</span><span class="number">2005</span>/<span class="number">06</span>/<span class="number">01</span><span class="string">&quot; -zcvf home.tar.gz /home</span></span><br><span class="line"><span class="string">范例七：我要备份 /home, /etc ，但不要 /home/dmtsai</span></span><br><span class="line"><span class="string">[root@linux ~]# tar --exclude /home/dmtsai -zcvf myfile.tar.gz /home/* /etc</span></span><br><span class="line"><span class="string">范例八：将 /etc/ 打包后直接解开在 /tmp 底下，而不产生文件！</span></span><br><span class="line"><span class="string">[root@linux ~]# cd /tmp</span></span><br><span class="line"><span class="string">[root@linux tmp]# tar -cvf - /etc | tar -xvf -</span></span><br><span class="line"><span class="string">这个动作有点像是 cp -r /etc /tmp 啦～依旧是有其有用途的！</span></span><br><span class="line"><span class="string">要注意的地方在於输出档变成 - 而输入档也变成 - ，又有一个 | 存在～</span></span><br><span class="line"><span class="string">这分别代表 standard output, standard input 与管线命令啦！</span></span><br><span class="line"><span class="string">123456789101112131415161718192021222324252627282930313233343536</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="21-bc指令："><a href="#21-bc指令：" class="headerlink" title="21.bc指令："></a>21.bc指令：</h2><p>bc命令可以很方便的进行浮点运算</p>
+<p>功能：计算器</p>
+<h2 id="22-重要的几个热键-Tab-ctrl-c-ctrl-d-ctrl-r"><a href="#22-重要的几个热键-Tab-ctrl-c-ctrl-d-ctrl-r" class="headerlink" title="22.重要的几个热键[Tab],[ctrl]-c, [ctrl]-d,[ctrl]-r"></a>22.重要的几个热键[Tab],[ctrl]-c, [ctrl]-d,[ctrl]-r</h2><ul>
+<li>[Tab]按键—具有『命令补全』和『档案补齐』的功能</li>
+<li>[Ctrl]-c按键—让当前的程序『停掉』</li>
+<li>[Ctrl]-d按键—通常代表着：『键盘输入结束(End Of File, EOF 戒 End OfInput)』的意思；另外，他也可以用来取代exit</li>
+<li>[ctrl]-r按键—搜索历史命令（linux会默认记录最新的1000条）</li>
+</ul>
+<h2 id="23-关机"><a href="#23-关机" class="headerlink" title="23.关机"></a>23.关机</h2><p><strong>语法</strong>：shutdown [选项]</p>
+<p><strong>常见选项</strong>：</p>
+<ul>
+<li>-h ： 将系统的服务停掉后，立即关机。</li>
+<li>-r ： 在将系统的服务停掉之后就重新启动</li>
+<li>-t sec ： -t 后面加秒数，亦即『过几秒后关机』的意思</li>
+</ul>
+<h2 id="扩展指令"><a href="#扩展指令" class="headerlink" title="扩展指令:"></a>扩展指令:</h2><p>◆ <strong>安装和登录命令</strong>：login、shutdown、halt、reboot、install、mount、umount、chsh、exit、last；<br>◆ <strong>文件处理命令</strong>：file、mkdir、grep、dd、find、mv、ls、diff、cat、ln；<br>◆ <strong>系统管理相关命令</strong>：df、top、free、quota、at、lp、adduser、groupadd、kill、crontab；<br>◆ <strong>网络操作命令</strong>：ifconfig、ip、ping、netstat、telnet、ftp、route、rlogin、rcp、finger、mail、 nslookup；<br>◆ <strong>系统安全相关命令</strong>：passwd、su、umask、chgrp、chmod、chown、chattr、sudo ps、who；<br>◆ <strong>其它命令</strong>：tar、unzip、gunzip、unarj、mtools、man、unendcode、uudecode。</p>
+<h2 id="shell命令以及运行原理"><a href="#shell命令以及运行原理" class="headerlink" title="shell命令以及运行原理"></a>shell命令以及运行原理</h2><p>Linux严格意义上说的是一个操作系统，我们称之为“核心（kernel）“ ，但我们一般用户，不能直接使用kernel。而是通过kernel的“外壳”程序，也就是所谓的shell，来与kernel沟通。如何理解？</p>
+<p>类似于下面这样：</p>
+<p>为什么不能直接使用kernel？因为我们所有的指令最终都要在OS内部运行，但是OS使用难度高，作为用户，我们不能直接和OS打交道，而且如果直接与kernel沟通，容易对操作系统进行破坏，shell变相保护了OS。<br>从技术角度，Shell的最简单定义：命令行解释器（command Interpreter）主要包含：</p>
+<ul>
+<li>将使用者的命令翻译给核心（kernel）处理。</li>
+<li>同时，将核心的处理结果翻译给使用者。</li>
+</ul>
+<p><strong>对比windows GUI</strong>，我们操作windows 不是直接操作windows内核，而是通过图形接口，点击，从而完成我们的操作（比如进入D盘的操作，我们通常是双击D盘盘符.或者运行起来一个应用程序）。<br>接口，点击，从而完成我们的操作（比如进入D盘的操作，我们通常是双击D盘盘符.或者运行起来一个应用程序）。<br><strong>shell 对于Linux</strong>，有相同的作用，主要是对我们的指令进行解析，解析指令给Linux内核。反馈结果在通过内核运行出结果，通过shell解析给用户。</p>
+<ul>
+<li>帮助理解：如果说你是一个闷骚且害羞的程序员，那shell就像媒婆，操作系统内核就是你们村头漂亮的且有让你心动的MM小花。你看上了小花，但是有不好意思直接表白，那就让你你家人找媒婆帮你提亲，所有的事情你都直接跟媒婆沟通，由媒婆转达你的意思给小花，而我们找到媒婆姓王，所以我们叫它王婆，它对应我们常使用的bash</li>
+</ul>
+<h2 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h2><p>x86_64 &#x3D; x64</p>
+<p>x86&#x3D;x32</p>
+<p>指令的运行原理：输入指令的过程本质就是输入字符串，而指令的本质就是编译好的程序和脚本，它一定会在系统的特定路径下存放</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 380692614@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2023 qmruan
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
