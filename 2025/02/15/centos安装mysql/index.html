@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>centos安装mysql | mohoho</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="centos安装mysql | mohoho">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="about me刚步入社会的码农一枚">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About me">
+<meta property="og:url" content="http://example.com/about.html">
+<meta property="og:site_name" content="mohoho">
+<meta property="og:description" content="about me刚步入社会的码农一枚">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-08-18T20:58:23.000Z">
+<meta property="article:modified_time" content="2023-08-18T21:19:40.428Z">
+<meta property="article:author" content="qmruan">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpeg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpeg"/>
+</a>
+<div class="author">
+    <span>qmruan</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+            <a title="github"
+               href="https://github.com/mohoho"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:380692614@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=380692614&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=96474839"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(10)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            <small>(3)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;玩轮子">
+            
+            玩轮子
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;linux">
+            
+            linux
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="生活">
+            
+            生活
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="推荐">
+            <i class="fold iconfont icon-right"></i>
+            推荐
+            <small>(5)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;动画">
+            
+            动画
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;人">
+            
+            人
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;游戏">
+            
+            游戏
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="推荐&lt;---&gt;有声书">
+            
+            有声书
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="10">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All 编程 linux "
+           href="/2025/02/15/centos%E5%AE%89%E8%A3%85mysql/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="centos安装mysql">centos安装mysql</span>
+            <span class="post-date" title="2025-02-15 22:13:15">2025/02/15</span>
+        </a>
+        
+        
+        <a  class="All 生活 "
+           href="/2023/09/12/%E2%80%9C%E4%BB%8A%E6%97%A5%E6%96%B9%E7%9F%A5%E6%88%91%E6%98%AF%E6%88%91%E2%80%9D%E2%80%94%E2%80%94%E5%93%81%E6%99%BA%E6%B7%B1%E5%A4%A7%E5%B8%88%E5%81%88%E8%AF%AD/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="“今日方知我是我”——品智深大师偈语">“今日方知我是我”——品智深大师偈语</span>
+            <span class="post-date" title="2023-09-12 01:18:23">2023/09/12</span>
+        </a>
+        
+        
+        <a  class="All 编程 linux "
+           href="/2023/09/01/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Linux常用指令">Linux常用指令</span>
+            <span class="post-date" title="2023-09-01 16:32:07">2023/09/01</span>
+        </a>
+        
+        
+        <a  class="All 推荐 人 "
+           href="/2023/08/21/%E4%BF%9D%E6%8A%A4%E6%BF%92%E5%8D%B1up%E4%B8%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="保护濒危up主">保护濒危up主</span>
+            <span class="post-date" title="2023-08-21 23:45:36">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 游戏 "
+           href="/2023/08/21/%E8%89%BE%E8%BF%AA%E8%8A%AC%E5%A5%87%E7%9A%84%E8%AE%B0%E5%BF%86/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="艾迪芬奇的记忆">艾迪芬奇的记忆</span>
+            <span class="post-date" title="2023-08-21 23:37:38">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 动画 "
+           href="/2023/08/21/%E9%9B%BE%E5%B1%B1%E4%BA%94%E8%A1%8C/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="雾山五行">雾山五行</span>
+            <span class="post-date" title="2023-08-21 23:31:20">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 有声书 "
+           href="/2023/08/21/%E4%BB%8E%E5%A7%91%E8%8E%B7%E9%B8%9F%E5%BC%80%E5%A7%8B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="从姑获鸟开始">从姑获鸟开始</span>
+            <span class="post-date" title="2023-08-21 23:17:38">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 推荐 游戏 "
+           href="/2023/08/21/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="黑神话悟空">黑神话悟空</span>
+            <span class="post-date" title="2023-08-21 23:04:45">2023/08/21</span>
+        </a>
+        
+        
+        <a  class="All 生活 "
+           href="/2023/08/20/%E7%88%B1%E4%BA%BA%E5%A6%82%E5%85%BB%E8%8A%B1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="爱人如养花">爱人如养花</span>
+            <span class="post-date" title="2023-08-20 15:43:09">2023/08/20</span>
+        </a>
+        
+        
+        <a  class="All 编程 玩轮子 "
+           href="/2023/08/19/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%9C%AC%E7%AB%99/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="如何搭建本站">如何搭建本站</span>
+            <span class="post-date" title="2023-08-19 05:22:16">2023/08/19</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-centos安装mysql" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">centos安装mysql</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="编程">编程</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;linux">linux</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-02-15 22:14:47'>2025-02-15 22:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-MySQL-rpm-%E6%BA%90%E4%BF%A1%E6%81%AF"><span class="toc-text">安装 MySQL rpm 源信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-text">检查安装是否成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">MySQL 常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E5%92%8C%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="toc-text">登录和修改密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%94%BE-root-%E8%B4%A6%E6%88%B7%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95"><span class="toc-text">开放 root 账户远程登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE"><span class="toc-text">端口开放</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先，尝试一下直接使用 yum 安装 MySQL</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-community-server</span><br></pre></td></tr></table></figure>
+
+<p>如果成功，表示不需要配置MySQL <a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=226748817&content_type=Article&match_order=1&q=rpm+%E6%BA%90%E4%BF%A1%E6%81%AF&zhida_source=entity">rpm 源信息</a>，直接就安装完成了</p>
+<p>但是，如果出现以下错误：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line">没有可用软件包 mysql-community-server。</span><br><span class="line">错误：无须任何处理</span><br></pre></td></tr></table></figure>
+
+<p>表示我们没有添加安装包的源信息，需要安装 MySQL rpm 源信息</p>
+<h3 id="安装-MySQL-rpm-源信息"><a href="#安装-MySQL-rpm-源信息" class="headerlink" title="安装 MySQL rpm 源信息"></a>安装 MySQL rpm 源信息</h3><p>打开 <a href="https://link.zhihu.com/?target=http://dev.mysql.com/downloads/repo/yum/">http://dev.mysql.com/downloads/repo/yum/</a></p>
+<p><img src="https://pic1.zhimg.com/v2-c7386b38916fc9958490b651a93d0860_1440w.jpg" alt="img"></p>
+<p>根据你的系统版本，选择对应的安装包，例如我的是CentOS 7.5，这个系统的Linux内核是 Linux 7，所以我选择了红框内的地址，大家依次类推。</p>
+<p>拼接下载地址头：<a href="https://link.zhihu.com/?target=http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm">http://dev.mysql.com/get/</a>，得到以下地址</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>使用 wget + 刚才拼接的地址，下载安装包源信息</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget  http://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>rpm 安装源信息</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh mysql80-community-release-el7-7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>再尝试使用 yum 安装MySQL</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-community-server</span><br></pre></td></tr></table></figure>
+
+<p>安装过程中，会提示让我们确认，一律输入 <code>y</code> 按回车即可</p>
+<p>安装完成后，yum会自动覆盖自带的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=226748817&content_type=Article&match_order=1&q=mariaDB&zhida_source=entity">mariaDB</a>，所以不需要我们手动卸载它</p>
+<h3 id="检查安装是否成功"><a href="#检查安装是否成功" class="headerlink" title="检查安装是否成功"></a>检查安装是否成功</h3><p>检查一下刚才的安装是否成功</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep mysql</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql-community-libs-compat-8.0.33-1.el7.x86_64</span><br><span class="line">mysql-community-icu-data-files-8.0.33-1.el7.x86_64</span><br><span class="line">mysql80-community-release-el7-7.noarch</span><br><span class="line">mysql-community-common-8.0.33-1.el7.x86_64</span><br><span class="line">mysql-community-libs-8.0.33-1.el7.x86_64</span><br><span class="line">mysql-community-server-8.0.33-1.el7.x86_64</span><br><span class="line">mysql-community-client-8.0.33-1.el7.x86_64</span><br><span class="line">mysql-community-client-plugins-8.0.33-1.el7.x86_64</span><br></pre></td></tr></table></figure>
+
+<p>输出类似以上内容，表示安装完成</p>
+<p>检查mariaDB是否被覆盖</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep mariadb</span><br></pre></td></tr></table></figure>
+
+<p>输出空，表示 mariaDB 已经被成功覆盖。</p>
+<h2 id="MySQL-常用命令"><a href="#MySQL-常用命令" class="headerlink" title="MySQL 常用命令"></a>MySQL 常用命令</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"># 启动</span><br><span class="line">systemctl start mysqld</span><br><span class="line"></span><br><span class="line"># 第一次启动后，可以查看mysql初始化密码</span><br><span class="line">grep &#x27;temporary password&#x27; /var/log/mysqld.log</span><br><span class="line"></span><br><span class="line"># 重启</span><br><span class="line">systemctl restart mysqld</span><br><span class="line"></span><br><span class="line"># 停止</span><br><span class="line">systemctl stop mysqld</span><br><span class="line"></span><br><span class="line">#查看状态</span><br><span class="line">systemctl status mysqld</span><br><span class="line"></span><br><span class="line">#开机启动</span><br><span class="line">systemctl enable mysqld</span><br><span class="line">systemctl daemon-reload</span><br><span class="line"></span><br><span class="line"># 查看进程、版本信息</span><br><span class="line">ps -ef | grep mysql</span><br><span class="line">或</span><br><span class="line">netstat -atp</span><br><span class="line"></span><br><span class="line"># 登录</span><br><span class="line">mysql -u root -p&#x27;密码内容&#x27;</span><br><span class="line"></span><br><span class="line"># 查看所有表</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line"># 进入数据库</span><br><span class="line">use 表名</span><br><span class="line"></span><br><span class="line"># 查看所有表</span><br><span class="line">show tables</span><br><span class="line"></span><br><span class="line"># 查看某张表信息</span><br><span class="line">desc 表名</span><br><span class="line"></span><br><span class="line"># 查</span><br><span class="line">select * from 表名</span><br><span class="line"># 删</span><br><span class="line">delete from 表名 where field=xx</span><br><span class="line"># 改</span><br><span class="line">update 表名 set field=&#x27;xxx&#x27; where field=&#x27;xxx&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="登录和修改密码"><a href="#登录和修改密码" class="headerlink" title="登录和修改密码"></a>登录和修改密码</h2><p>我们安装的时候，并没有设置初始密码</p>
+<p>所以 mysql 在第一次启动的时候，会自动初始化一个密码</p>
+<p>通过以下这行代码，我们可以查看 mysql 自动初始化的密码：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 第一次启动后，可以查看mysql初始化密码</span><br><span class="line">grep &#x27;temporary password&#x27; /var/log/mysqld.log</span><br><span class="line"></span><br><span class="line">输出（root@localhost: 后面的是密码）：</span><br><span class="line">2023-04-21T06:03:27.071550Z 6 [Note] [MY-010454] [Server] A temporary password</span><br><span class="line">is generated for root@localhost: r2to%yZ%a)%s</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>登录</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 登录mysql，一定要注意：-p和&#x27;密码&#x27;之间是没有空格的</span><br><span class="line">mysql -u root -p&#x27;r2to%yZ%a)%s&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>修改 root 密码</strong></p>
+<p>注意了，默认的密码策略，需要：大写英文 + 特殊字符 + 数字</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;Root_123&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>有些同学可能会觉得，老子密码想设置啥就设置啥，轮得到你这 mysql 在这里瞎BB？</p>
+<p>那也是可以修改密码校验策略的</p>
+<p>首先，安装密码验证插件</p>
+<blockquote>
+<p>但是有个前提，你还是需要先按它的要求修改第一次密码，才能安装密码验证策略插件，哈哈</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">1、先按照mysql的要求，修改一次密码</span><br><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;Root_123&#x27;;</span><br><span class="line"></span><br><span class="line">2、退出mysql</span><br><span class="line">exit</span><br><span class="line"></span><br><span class="line">3、重新登录mysql</span><br><span class="line">mysql -u root -p&#x27;Root_123&#x27;</span><br><span class="line"></span><br><span class="line">4、安装密码验证插件</span><br><span class="line">install plugin validate_password soname &#x27;validate_password.so&#x27;;</span><br><span class="line"></span><br><span class="line">5、查看是否启用了插件</span><br><span class="line">select plugin_name, plugin_status from information_schema.plugins where plugin_name like &#x27;validate%&#x27;;</span><br><span class="line">+-------------------+---------------+</span><br><span class="line">| plugin_name       | plugin_status |</span><br><span class="line">+-------------------+---------------+</span><br><span class="line">| validate_password | ACTIVE        |</span><br><span class="line">+-------------------+---------------+</span><br><span class="line">输出这样的内容，表示成功启用</span><br></pre></td></tr></table></figure>
+
+
+
+<p>查看验证策略的键、值信息</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">SHOW VARIABLES LIKE &#x27;validate_password%&#x27;;</span><br><span class="line"></span><br><span class="line">对于高版本的mysql，例如mysql 8，验证策略的key，是 validate_password.xxx</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| Variable_name                        | Value |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| validate_password.check_user_name    | ON    |</span><br><span class="line">| validate_password.dictionary_file    |       |</span><br><span class="line">| validate_password.length             | 8     |</span><br><span class="line">| validate_password.mixed_case_count   | 1     |</span><br><span class="line">| validate_password.number_count       | 1     |</span><br><span class="line">| validate_password.policy             | MEDIUM|</span><br><span class="line">| validate_password.special_char_count | 1     |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">对于低版本的mysql，例如mysql 5.7，验证策略的key，是 validate_password_xxx</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| Variable_name                        | Value |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| validate_password.check_user_name    | ON    |</span><br><span class="line">| validate_password.dictionary_file    |       |</span><br><span class="line">| validate_password.length             | 8     |</span><br><span class="line">| validate_password.mixed_case_count   | 1     |</span><br><span class="line">| validate_password.number_count       | 1     |</span><br><span class="line">| validate_password.policy             | MEDIUM|</span><br><span class="line">| validate_password.special_char_count | 1     |</span><br><span class="line">+--------------------------------------+-------+</span><br></pre></td></tr></table></figure>
+
+
+
+<p>我们修改密码策略和密码长度</p>
+<p>我的策略信息的 key ，是 <code>validate_password.xxx</code>这个格式的，所以按照如下进行设置</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">设置密码校验策略为：0（只验证密码长度）</span><br><span class="line">set global validate.password_policy=0;</span><br><span class="line"></span><br><span class="line">设置密码最低长度=N，例如设置密码最低长度=6，也就是密码最少要设置6个字符及以上</span><br><span class="line">set global validate.password_length=6;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>好了，现在密码就可以按照你刚才配置的策略，来进行设置密码了</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;123456&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="开放-root-账户远程登录"><a href="#开放-root-账户远程登录" class="headerlink" title="开放 root 账户远程登录"></a>开放 root 账户远程登录</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 登录</span><br><span class="line">mysql -u root -p&#x27;密码&#x27;</span><br><span class="line"></span><br><span class="line"># 如果你的数据库是 mysql 8 及以上</span><br><span class="line"># 1、进入数据库</span><br><span class="line">use mysql</span><br><span class="line"># 2、修改user表</span><br><span class="line">update user set host=&#x27;%&#x27; where user=&#x27;root&#x27;;</span><br><span class="line"></span><br><span class="line"># mysql 5.7 及之前，执行这行代码即可</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#x27;root&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;你的密码&#x27; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line"># 重载授权表</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"></span><br><span class="line"># 退出</span><br><span class="line">exit</span><br><span class="line"></span><br><span class="line"># 重启</span><br><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="端口开放"><a href="#端口开放" class="headerlink" title="端口开放"></a>端口开放</h2><p>经过实测，使用阿里云或者腾讯云，在服务器上，无需配置 <code>iptables</code> 端口信息</p>
+<p>但必须在阿里云或者腾讯云控制台 - 服务器 - 安全组，开放 3306端口。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 380692614@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2023 qmruan
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
